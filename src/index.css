@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
-
-/* src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-textile-gold: #C5A059;
+  --color-textile-cream: #FDFBF7;
+  --color-textile-dark: #2D2926;
+}
 
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-  background-color: #FDFBF7; /* textile-cream */
+  background-color: var(--color-textile-cream);
 }

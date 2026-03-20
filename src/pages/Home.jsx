@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/Product/ProductCard';
 import AssociatesMap from '../components/Home/AssociatesMap';
+import CustomerReviews from '../components/Home/CustomerReviews';
 
 const Home = () => {
   // Static colors for consistent B2B branding
@@ -43,7 +44,7 @@ const Home = () => {
 
   {/* e-Quotation Button */}
   <Link 
-    to="/equotation" 
+    to="/portal" 
     className="inline-block border border-slate-900 text-slate-900 px-10 py-5 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition-all no-underline"
     style={{ minWidth: '200px', textAlign: 'center' }}
   >
@@ -106,6 +107,9 @@ const Home = () => {
       {/* 4. ASSOCIATES MAP */}
       <AssociatesMap />
 
+      {/* 5. CUSTOMER REVIEWS */}
+      <CustomerReviews />
+
       {/* 5. MANAGEMENT & VISION */}
       <section className="py-32 bg-textile-cream overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-center">
@@ -157,15 +161,19 @@ const Home = () => {
           <div>
             <h3 style={{ color: goldColor }} className="text-xs font-bold uppercase tracking-[0.4em] mb-8">Market Updates</h3>
             <div className="space-y-10">
-              {['Impact of New Export Policy 2026', 'Cotton Q3 Quality Standard Report', 'Sustainable Growth & Organic Cotton'].map((blog, i) => (
-                <div key={i} className="group cursor-pointer border-b border-gray-100 pb-6">
-                  <h4 className="text-xl font-bold text-textile-dark group-hover:text-textile-gold transition-colors mb-2 uppercase tracking-tight">{blog}</h4>
+              {[
+                { title: 'The Rise of Organic Cotton in Indian Textile Industry', link: '/blog' },
+                { title: 'Denim Trends for 2026: Texture and Durability', link: '/blog' },
+                { title: 'Understanding GSM: A Guide for Bulk Buyers', link: '/blog' }
+              ].map((blog, i) => (
+                <Link key={i} to={blog.link} className="block group cursor-pointer border-b border-gray-100 pb-6 no-underline">
+                  <h4 className="text-xl font-bold text-textile-dark group-hover:text-textile-gold transition-colors mb-2 uppercase tracking-tight">{blog.title}</h4>
                   <div className="flex items-center gap-4">
-                    <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Oct 20, 2026</span>
+                    <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">March 2026</span>
                     <span style={{ backgroundColor: goldColor }} className="w-1 h-1 rounded-full"></span>
                     <span className="text-[10px] text-textile-gold uppercase font-bold">5 Min Read</span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

@@ -9,12 +9,18 @@ import FloatingActions from './components/Common/FloatingActions';
 // Page Components
 import Home from './pages/Home';
 import Products from './pages/Products';
-import BusinessPortal from './pages/BusinessPortal'; // Form, Enquiry, Appointment yahan hai
-import Auction from './pages/Auction';           // e-Auction aur Tenders yahan hai
+import BusinessPortal from './pages/BusinessPortal';
+import Auction from './pages/Auction';
 import Career from './pages/Career';
 import MediaGallery from './pages/MediaGallery';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import Management from './pages/Management';
+import Circular from './pages/Circular';
+import Blog from './pages/Blog';
+import Associates from './pages/Associates';
+import Tender from './pages/Tender';
+
 // CSS Import
 import './index.css';
 
@@ -29,20 +35,16 @@ const ScrollToTop = () => {
 
 // --- 404 Page (Not Found) ---
 const NotFound = () => (
-  <div className="pt-60 pb-40 text-center min-h-screen bg-textile-cream">
+  <div className="pt-60 pb-40 text-center min-h-screen bg-[#FDFBF7]">
     <h1 className="text-9xl font-black text-textile-gold opacity-20">404</h1>
     <p className="text-xs font-bold uppercase tracking-[0.5em] text-textile-dark -mt-10">Page Not Found</p>
     <Link to="/" className="inline-block mt-10 border-b-2 border-textile-dark pb-1 text-[10px] font-black uppercase tracking-widest hover:text-textile-gold hover:border-textile-gold transition-all no-underline">Back to Home</Link>
   </div>
 );
 
-// --- About Page Placeholder (Agar alag file nahi banayi hai to) --
 function App() {
   return (
     <Router>
-      {/* Yahan 'selection:text-textile-dark' add kiya hai taaki 
-          Gold background par Black text saaf dikhe jab aap select karo.
-      */}
       <div className="App selection:bg-[#C5A059] selection:text-[#1A1816]">
         <ScrollToTop />
         
@@ -53,9 +55,14 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/portal" element={<BusinessPortal />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/tenders" element={<Auction />} />
+            <Route path="/tenders" element={<Tender />} />
+            <Route path="/auction" element={<Auction />} />
             <Route path="/media" element={<MediaGallery />} />
             <Route path="/about" element={<About />} />
+            <Route path="/management" element={<Management />} />
+            <Route path="/circulars" element={<Circular />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/associates" element={<Associates />} />
             <Route path="/career" element={<Career />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />

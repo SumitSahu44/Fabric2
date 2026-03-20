@@ -1,14 +1,13 @@
-// File: src/pages/Auction.jsx
 import React from 'react';
 
 const Auction = () => {
   const goldColor = "#C5A059";
   const darkColor = "#1A1816";
 
-  const tenders = [
-    { id: "PF/TND/2026/08", title: "Bulk Raw Cotton - 500 Metric Tons", status: "Live", end: "25 March 2026", category: "Raw Material" },
-    { id: "PF/TND/2026/09", title: "Finished Denim Fabric - 50k Meters", status: "Upcoming", end: "02 April 2026", category: "Finished Product" },
-    { id: "PF/TND/2026/07", title: "Cotton Yarn Export Quality", status: "Closed", end: "15 March 2026", category: "Yarn" },
+  const auctions = [
+    { id: "AUC/6D/2026/12", title: "Premium Shankar-6 Cotton (Lot A)", currentBid: "₹62,500/Candy", end: "2 hrs 15 mins", bidders: 14 },
+    { id: "AUC/6D/2026/13", title: "Combed Yarn 40s (5000 KG)", currentBid: "₹285/KG", end: "5 hrs 30 mins", bidders: 8 },
+    { id: "AUC/6D/2026/11", title: "Organic Cotton Fiber - Lot B", currentBid: "₹65,000/Candy", end: "Closed", bidders: 21 },
   ];
 
   return (
@@ -16,49 +15,60 @@ const Auction = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-4">B2B Portal</h2>
-            <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase tracking-tighter">e-Auction & <span className="font-bold">Tenders</span></h1>
+            <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-4">Live Bidding</h2>
+            <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase tracking-tighter">e-Auction <span className="font-bold">Portal</span></h1>
           </div>
-          <button style={{ backgroundColor: darkColor }} className="text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-[#C5A059] transition-all">Download Guidelines</button>
+          <div className="flex gap-4">
+            <div className="bg-white px-6 py-2 border border-gray-100 shadow-sm text-center">
+              <p className="text-[8px] text-gray-400 uppercase font-black mb-1">Live Auctions</p>
+              <p className="text-lg font-bold text-green-600">02</p>
+            </div>
+            <button style={{ backgroundColor: darkColor }} className="text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-[#C5A059] transition-all">KYC Verification</button>
+          </div>
         </div>
 
-        <div className="bg-white shadow-2xl overflow-hidden border-t-4" style={{ borderColor: goldColor }}>
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="bg-gray-50 text-[11px] font-bold uppercase tracking-widest text-gray-400">
-                <th className="p-6 border-b">Tender ID</th>
-                <th className="p-6 border-b">Description</th>
-                <th className="p-6 border-b">Status</th>
-                <th className="p-6 border-b">Deadline</th>
-                <th className="p-6 border-b text-right">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tenders.map((item, index) => (
-                <tr key={index} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                  <td className="p-6 font-mono text-xs text-textile-gold font-bold">{item.id}</td>
-                  <td className="p-6">
-                    <p className="text-sm font-bold text-textile-dark uppercase m-0">{item.title}</p>
-                    <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">{item.category}</span>
-                  </td>
-                  <td className="p-6">
-                    <span className={`text-[9px] font-bold uppercase px-3 py-1 rounded-full ${
-                      item.status === 'Live' ? 'bg-green-100 text-green-700 animate-pulse' : 
-                      item.status === 'Upcoming' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-400'
-                    }`}>
-                      {item.status}
-                    </span>
-                  </td>
-                  <td className="p-6 text-xs text-gray-500 font-bold uppercase">{item.end}</td>
-                  <td className="p-6 text-right">
-                    <button className="text-[10px] font-black underline uppercase tracking-[0.2em] hover:text-[#C5A059] transition-colors">
-                      {item.status === 'Closed' ? 'View Results' : 'Submit Bid'}
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="grid md:grid-cols-3 gap-8">
+          {auctions.map((item, index) => (
+            <div key={index} className="bg-white shadow-xl border-t-4 hover:shadow-2xl transition-all duration-500" style={{ borderColor: item.end === 'Closed' ? '#EEE' : goldColor }}>
+              <div className="p-8">
+                <div className="flex justify-between items-start mb-6">
+                  <span className="text-[10px] font-mono text-gray-300 font-bold">{item.id}</span>
+                  <span className={`text-[8px] font-black uppercase px-2 py-1 ${item.end === 'Closed' ? 'bg-gray-100 text-gray-400' : 'bg-red-50 text-red-600 animate-pulse'}`}>
+                    {item.end === 'Closed' ? 'Ended' : 'Live'}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-textile-dark uppercase tracking-tighter mb-4 h-12">{item.title}</h3>
+                
+                <div className="space-y-3 mb-8">
+                  <div className="flex justify-between border-b border-gray-50 pb-2">
+                    <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Current Bid:</span>
+                    <span className="text-[11px] text-textile-dark font-black">{item.currentBid}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-50 pb-2">
+                    <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Time Left:</span>
+                    <span className="text-[11px] text-textile-gold font-bold">{item.end}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Active Bidders:</span>
+                    <span className="text-[11px] text-textile-dark font-bold">{item.bidders}</span>
+                  </div>
+                </div>
+
+                <button 
+                  disabled={item.end === 'Closed'}
+                  className={`w-full py-4 text-[10px] font-black uppercase tracking-[0.3em] transition-all ${
+                    item.end === 'Closed' ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-textile-dark text-white hover:bg-textile-gold'
+                  }`}
+                >
+                  {item.end === 'Closed' ? 'Auction Ended' : 'Place Bid'}
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 p-8 bg-textile-cream border border-textile-gold/20 text-center">
+           <p className="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Note: All bidders must have a verified B2B GST account to participate in live auctions.</p>
         </div>
       </div>
     </div>

@@ -1,14 +1,14 @@
-// File: src/components/Layout/Navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isBusinessOpen, setIsBusinessOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  // Custom Styles
   const goldColor = "#C5A059";
   const darkColor = "#2D2926";
+
   const dropdownStyle = {
     position: 'absolute',
     top: '100%',
@@ -23,79 +23,164 @@ const Navbar = () => {
     zIndex: 1000
   };
 
-  const linkClass = "px-6 py-3 no-underline text-black text-[10px] font-bold uppercase tracking-widest hover:bg-gray-50 transition-all";
+  const mobileDropdown = {
+    display: 'flex',
+    flexDirection: 'column',
+    paddingLeft: '10px'
+  };
+
+  const linkClass = "px-6 py-3 no-underline text-black text-[10px] font-bold uppercase tracking-widest hover:bg-gray-50";
 
   return (
-    <nav style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderBottom: `1px solid ${goldColor}33` }} 
-         className="fixed w-full z-[100] px-6 py-4 backdrop-blur-md">
-      
+    <nav
+      style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderBottom: `1px solid ${goldColor}33` }}
+      className="fixed w-full z-[100] px-4 py-4 backdrop-blur-md"
+    >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        
-        {/* --- Logo --- */}
+
+        {/* Logo */}
         <Link to="/" className="no-underline">
-          <h1 style={{ color: darkColor }} className="text-xl font-bold tracking-tighter uppercase m-0">
+          <h1 style={{ color: darkColor }} className="text-xl font-bold uppercase m-0">
             PAREKH <span style={{ color: goldColor }}>FABRICS</span>
           </h1>
-          <p className="text-[9px] uppercase tracking-[0.4em] text-gray-400 font-bold m-0">Ahmedabad • India</p>
+          <p className="text-[9px] uppercase tracking-[0.4em] text-gray-400 font-bold m-0">
+            Ahmedabad • India
+          </p>
         </Link>
 
-        {/* --- Navigation Links --- */}
+        {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-8 text-[11px] font-bold uppercase tracking-widest">
-          
-          <Link to="/" style={{ color: darkColor }} className="hover:text-[#C5A059] no-underline transition-all">Home</Link>
 
-          {/* Company Dropdown */}
-          <div 
+          <Link to="/" style={{ color: darkColor }} className="hover:text-[#C5A059]">Home</Link>
+
+          {/* Company */}
+          <div
             className="relative py-2"
             onMouseEnter={() => setIsCompanyOpen(true)}
             onMouseLeave={() => setIsCompanyOpen(false)}
           >
-            <span style={{ color: darkColor }} className="cursor-pointer flex items-center gap-1 hover:text-[#C5A059]">
+            <span style={{ color: darkColor }} className="cursor-pointer flex items-center gap-2 hover:text-[#C5A059]">
               Company
-              <svg style={{ width: '12px', transform: isCompanyOpen ? 'rotate(180deg)' : 'rotate(0)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg
+                className="transition-transform duration-300"
+                style={{ width: '14px', height: '14px', transform: isCompanyOpen ? 'rotate(180deg)' : 'rotate(0)' }}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
             </span>
+
             {isCompanyOpen && (
               <div style={dropdownStyle}>
                 <Link to="/about" className={linkClass}>About Us</Link>
+                <Link to="/management" className={linkClass}>Our Management</Link>
+                <Link to="/associates" className={linkClass}>Our Associates</Link>
                 <Link to="/career" className={linkClass}>Careers</Link>
                 <Link to="/media" className={linkClass}>Media Gallery</Link>
               </div>
             )}
           </div>
 
-          <Link to="/products" style={{ color: darkColor }} className="hover:text-[#C5A059] no-underline transition-all">Products</Link>
+          <Link to="/products" style={{ color: darkColor }}>Products</Link>
+          <Link to="/blog" style={{ color: darkColor }}>Blog</Link>
 
-          {/* Business Hub Dropdown (Crucial Links) */}
-          <div 
+          {/* Business */}
+          <div
             className="relative py-2"
             onMouseEnter={() => setIsBusinessOpen(true)}
             onMouseLeave={() => setIsBusinessOpen(false)}
           >
-            <span style={{ color: goldColor, borderBottom: `1px solid ${goldColor}` }} className="cursor-pointer flex items-center gap-1 hover:opacity-80">
+            <span style={{ color: goldColor, borderBottom: `1px solid ${goldColor}` }} className="cursor-pointer flex items-center gap-2">
               Business Hub
-              <svg style={{ width: '12px', transform: isBusinessOpen ? 'rotate(180deg)' : 'rotate(0)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              <svg
+                className="transition-transform duration-300"
+                style={{ width: '14px', height: '14px', transform: isBusinessOpen ? 'rotate(180deg)' : 'rotate(0)' }}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
             </span>
+
             {isBusinessOpen && (
               <div style={dropdownStyle}>
-                <Link to="/portal" className={linkClass}>Trade Enquiry</Link>
                 <Link to="/portal" className={linkClass}>e-Quotation</Link>
-                <Link to="/tenders" className={linkClass}>e-Auction</Link>
-                <Link to="/tenders" className={linkClass}>Tender & Contract</Link>
+                <Link to="/auction" className={linkClass}>e-Auction</Link>
+                <Link to="/tenders" className={linkClass}>Tenders</Link>
+                <Link to="/circulars" className={linkClass}>Circulars</Link>
                 <Link to="/portal" className={linkClass}>Visit Appointment</Link>
               </div>
             )}
           </div>
 
-          <Link to="/contact" style={{ color: darkColor }} className="hover:text-[#C5A059] no-underline transition-all">Contact</Link>
+          <Link to="/contact" style={{ color: darkColor }}>Contact</Link>
         </div>
 
-        {/* --- CTA Button --- */}
-        <Link to="/portal">
-          <button style={{ backgroundColor: darkColor, color: 'white' }} className="px-7 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-[#C5A059] transition-all border-none cursor-pointer shadow-lg">
-            Enquire Now
+        {/* CTA */}
+        <div className="hidden lg:block">
+          <Link to="/portal">
+            <button style={{ backgroundColor: darkColor }} className="px-6 py-2 text-white text-xs">
+              Enquire Now
+            </button>
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger */}
+        <div className="lg:hidden">
+          <button onClick={() => setIsMobileOpen(!isMobileOpen)}>
+            ☰
           </button>
-        </Link>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileOpen && (
+        <div className="lg:hidden bg-white mt-4 shadow-md flex flex-col text-[11px] font-bold uppercase">
+
+          <Link to="/" className="p-3">Home</Link>
+
+          {/* Company Mobile */}
+          <div>
+            <div onClick={() => setIsCompanyOpen(!isCompanyOpen)} className="p-3 cursor-pointer">
+              Company
+            </div>
+            {isCompanyOpen && (
+              <div style={mobileDropdown}>
+                <Link to="/about" className="p-2">About Us</Link>
+                <Link to="/management" className="p-2">Our Management</Link>
+                <Link to="/associates" className="p-2">Our Associates</Link>
+              </div>
+            )}
+          </div>
+
+          <Link to="/products" className="p-3">Products</Link>
+          <Link to="/blog" className="p-3">Blog</Link>
+
+          {/* Business Mobile */}
+          <div>
+            <div onClick={() => setIsBusinessOpen(!isBusinessOpen)} className="p-3 cursor-pointer">
+              Business Hub
+            </div>
+            {isBusinessOpen && (
+              <div style={mobileDropdown}>
+                <Link to="/portal" className="p-2">e-Quotation</Link>
+                <Link to="/auction" className="p-2">e-Auction</Link>
+                <Link to="/tenders" className="p-2">Tenders</Link>
+                <Link to="/circulars" className="p-2">Circulars</Link>
+              </div>
+            )}
+          </div>
+
+          <Link to="/contact" className="p-3">Contact</Link>
+
+          <Link to="/portal" className="p-3">
+            <button className="w-full bg-black text-white py-2">Enquire Now</button>
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };
