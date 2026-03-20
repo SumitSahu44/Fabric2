@@ -9,12 +9,12 @@ const Products = () => {
   const [filter, setFilter] = useState('All');
 
   const productData = [
-    { id: 1, name: "Shankar-6 Raw Cotton", cat: "Raw Cotton", img: "https://images.unsplash.com/photo-1594904351111-a072f80b1a71" },
-    { id: 2, name: "Combed Cotton Yarn", cat: "Yarn", img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633" },
-    { id: 3, name: "Organic Twill Fabric", cat: "Finished Fabric", img: "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17" },
-    { id: 4, name: "Industrial Canvas", cat: "Finished Fabric", img: "https://images.unsplash.com/photo-1558271823-662425ce5e04" },
-    { id: 5, name: "Cotton Grey Cloth", cat: "Raw Cotton", img: "https://images.unsplash.com/photo-1544441893-675973e31985" },
-    { id: 6, name: "Melange Yarn", cat: "Yarn", img: "https://images.unsplash.com/photo-1606744881054-ca829d4ee63f" },
+    { id: 1, name: "Shankar-6 Raw Cotton", cat: "Raw Cotton", img: "https://images.pexels.com/photos/36293915/pexels-photo-36293915.jpeg" },
+    { id: 2, name: "Combed Cotton Yarn", cat: "Yarn", img: "https://images.pexels.com/photos/5503358/pexels-photo-5503358.jpeg" },
+    { id: 3, name: "Organic Twill Fabric", cat: "Finished Fabric", img: "https://images.pexels.com/photos/6964261/pexels-photo-6964261.jpeg" },
+    { id: 4, name: "Industrial Canvas", cat: "Finished Fabric", img: "https://images.pexels.com/photos/4862889/pexels-photo-4862889.jpeg" },
+    { id: 5, name: "Cotton Grey Cloth", cat: "Raw Cotton", img: "https://images.pexels.com/photos/36516572/pexels-photo-36516572.jpeg" },
+    { id: 6, name: "Melange Yarn", cat: "Yarn", img: "https://images.pexels.com/photos/7205811/pexels-photo-7205811.jpeg" },
   ];
 
   const categories = ['All', 'Raw Cotton', 'Yarn', 'Finished Fabric'];
@@ -61,7 +61,7 @@ const Products = () => {
                 <img 
                   src={`${product.img}?auto=format&fit=crop&q=80&w=800`} 
                   alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 "
                 />
                 
                 {/* Overlay Details */}

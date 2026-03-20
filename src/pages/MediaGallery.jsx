@@ -6,10 +6,10 @@ const MediaGallery = () => {
   const darkColor = "#1A1816";
 
   const media = [
-    { type: 'image', url: 'https://images.unsplash.com/photo-1558271823-662425ce5e04', title: 'Factory Floor' },
-    { type: 'image', url: 'https://images.unsplash.com/photo-1594904351111-a072f80b1a71', title: 'Raw Cotton Quality' },
-    { type: 'video', url: '#', title: 'Manufacturing Process', placeholder: 'https://images.unsplash.com/photo-1524230507669-5ff97982bb5e' },
-    { type: 'image', url: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633', title: 'Yarn Spinning' },
+    { type: 'image', url: 'https://images.pexels.com/photos/236748/pexels-photo-236748.jpeg', title: 'Factory Floor' },
+    { type: 'image', url: 'https://images.pexels.com/photos/6045283/pexels-photo-6045283.jpeg', title: 'Raw Cotton Quality' },
+    { type: 'image', url: 'https://plus.unsplash.com/premium_photo-1682148883506-c1ee71fd2809?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRleHRpbGUlMjBpbmR1c3RyeXxlbnwwfHwwfHx8MA%3D%3D', title: 'Manufacturing Process', placeholder: '' },
+    { type: 'image', url: 'https://images.unsplash.com/photo-1718117059204-8380b0706219?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRleHRpbGUlMjBpbmR1c3RyeXxlbnwwfHwwfHx8MA%3D%3D', title: 'Yarn Spinning' },
   ];
 
   return (
@@ -25,7 +25,7 @@ const MediaGallery = () => {
             <div key={index} className="relative group overflow-hidden h-[400px] bg-gray-100 shadow-xl border-[10px] border-white transition-all hover:shadow-2xl">
               <img 
                 src={item.type === 'video' ? item.placeholder : `${item.url}?auto=format&fit=crop&q=80&w=1000`} 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover  transition-all duration-1000 group-hover:scale-105"
                 alt={item.title}
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">

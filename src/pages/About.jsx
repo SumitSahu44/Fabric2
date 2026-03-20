@@ -20,8 +20,8 @@ const About = () => {
           <div className="relative">
             <div style={{ borderColor: goldColor }} className="absolute -top-6 -left-6 w-32 h-32 border-l-4 border-t-4 z-0"></div>
             <img 
-              src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=1000" 
-              className="relative z-10 w-full h-[500px] object-cover shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" 
+              src="https://images.pexels.com/photos/5504037/pexels-photo-5504037.jpeg" 
+              className="relative z-10 w-full h-[500px] object-cover shadow-2xl transition-all duration-1000" 
               alt="Our Factory" 
             />
           </div>

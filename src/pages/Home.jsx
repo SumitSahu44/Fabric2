@@ -19,7 +19,7 @@ const Home = () => {
     <div className="bg-textile-cream min-h-screen">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-48 pb-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <section className="relative pt-20 pb-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="animate-fade-in-left">
           <h2 style={{ color: goldColor }} className="font-bold tracking-[0.5em] uppercase text-[10px] mb-6 flex items-center gap-3">
             <span style={{ backgroundColor: goldColor }} className="w-10 h-[1px]"></span> Since 1985
@@ -31,14 +31,25 @@ const Home = () => {
           <p className="text-gray-500 mb-10 max-w-md text-lg leading-relaxed border-l-4 border-textile-gold/30 pl-6">
             Ahmedabad's premier B2B textile hub specializing in high-grade raw cotton and finished fabrics for global markets.
           </p>
-          <div className="flex flex-wrap gap-6">
-            <Link to="/products" className="bg-textile-dark text-white px-10 py-5 text-xs font-bold uppercase tracking-widest hover:bg-textile-gold transition-all shadow-2xl no-underline">
-              Explore Portfolio
-            </Link>
-            <Link to="/portal" className="border border-textile-dark text-textile-dark px-10 py-5 text-xs font-bold uppercase tracking-widest hover:bg-textile-dark hover:text-white transition-all no-underline">
-              e-Quotation
-            </Link>
-          </div>
+          <div className="flex flex-wrap gap-6 relative z-10">
+  {/* Explore Portfolio Button - Added 'inline-block' and forced background */}
+  <Link 
+    to="/products" 
+    className="inline-block bg-[#0f172a] text-white px-10 py-5 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-orange-600 transition-all shadow-2xl no-underline"
+    style={{ minWidth: '200px', textAlign: 'center' }}
+  >
+    Explore Portfolio
+  </Link>
+
+  {/* e-Quotation Button */}
+  <Link 
+    to="/equotation" 
+    className="inline-block border border-slate-900 text-slate-900 px-10 py-5 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition-all no-underline"
+    style={{ minWidth: '200px', textAlign: 'center' }}
+  >
+    e-Quotation
+  </Link>
+</div>
         </div>
 
         {/* Decorative Image Box */}
@@ -46,7 +57,7 @@ const Home = () => {
           <div style={{ borderColor: `${goldColor}33` }} className="absolute -inset-4 border translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700"></div>
           <div className="relative h-[600px] overflow-hidden shadow-2xl">
             <img 
-              src="https://plus.unsplash.com/premium_photo-1756717218540-dde5a1c01020?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmliZXIlMjBjbG90aHN8ZW58MHx8MHx8fDA%3D" 
+              src="https://images.pexels.com/photos/36226281/pexels-photo-36226281.jpeg" 
               alt="Cotton Texture" 
               className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110"
             />
