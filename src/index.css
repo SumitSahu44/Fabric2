@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background-color: #FDFBF7; /* textile-cream */
+}
