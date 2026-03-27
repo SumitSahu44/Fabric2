@@ -24,7 +24,7 @@ const QuotationForm = () => {
   return (
     <div className="bg-white p-10 shadow-2xl border-t-4" style={{ borderColor: goldColor }}>
       <h3 className="text-2xl font-bold uppercase tracking-tighter mb-2" style={{ color: darkColor }}>
-        e-Quotation <span style={{ color: goldColor }}>Generator</span>
+        <span className="normal-case lowercase">e-</span>Quotation <span style={{ color: goldColor }}>Generator</span>
       </h3>
       <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.3em] mb-10">Instant B2B Price Estimate</p>
 

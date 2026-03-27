@@ -20,6 +20,7 @@ import Circular from './pages/Circular';
 import Blog from './pages/Blog';
 import Associates from './pages/Associates';
 import Tender from './pages/Tender';
+import CustomerReview from './pages/CustomerReview';
 
 // CSS Import
 import './index.css';
@@ -65,6 +66,7 @@ function App() {
             <Route path="/associates" element={<Associates />} />
             <Route path="/career" element={<Career />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/customer-review" element={<CustomerReview />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

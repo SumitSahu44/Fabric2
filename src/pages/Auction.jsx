@@ -16,7 +16,7 @@ const Auction = () => {
         <div className="flex justify-between items-end mb-12">
           <div>
             <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-4">Live Bidding</h2>
-            <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase tracking-tighter">e-Auction <span className="font-bold">Portal</span></h1>
+            <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase tracking-tighter"><span className="normal-case lowercase">e-</span>Auction <span className="font-bold">Portal</span></h1>
           </div>
           <div className="flex gap-4">
             <div className="bg-white px-6 py-2 border border-gray-100 shadow-sm text-center">

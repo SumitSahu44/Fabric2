@@ -44,7 +44,11 @@ const CustomerReviews = () => {
                ))}
              </div>
              
-             <p className="text-gray-600 text-xs italic leading-relaxed uppercase tracking-widest mb-10">"{review.text}"</p>
+             <p className="text-gray-600 text-xs italic leading-relaxed uppercase tracking-widest mb-10">
+               "{review.text.includes("e-") 
+                 ? <>{review.text.split("e-")[0]}<span className="normal-case lowercase font-bold">e-</span>{review.text.split("e-")[1]}</> 
+                 : review.text}"
+             </p>
              
              <div className="border-t border-gray-100 pt-8 flex justify-between items-center">
                <div>

@@ -48,7 +48,7 @@ const Home = () => {
     className="inline-block border border-slate-900 text-slate-900 px-10 py-5 text-[10px] font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition-all no-underline"
     style={{ minWidth: '200px', textAlign: 'center' }}
   >
-    e-Quotation
+    <span className="normal-case lowercase">e-</span>Quotation
   </Link>
 </div>
         </div>

@@ -39,13 +39,37 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
 
         {/* Logo */}
-        <Link to="/" className="no-underline">
-          <h1 style={{ color: darkColor }} className="text-xl font-bold uppercase m-0">
-            PAREKH <span style={{ color: goldColor }}>FABRICS</span>
-          </h1>
-          <p className="text-[9px] uppercase tracking-[0.4em] text-gray-400 font-bold m-0">
-            Ahmedabad • India
-          </p>
+        {/* LOGO */}
+        <Link to="/" className="flex items-center gap-3 no-underline">
+
+          {/* Logo Icon */}
+          <div
+            className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl text-white font-bold text-xl shadow-md"
+            style={{ backgroundColor: goldColor }}
+          >
+            P
+          </div>
+
+          {/* Text Content */}
+          <div className="flex flex-col leading-tight">
+
+            {/* Brand Name */}
+            <h1
+              style={{ color: darkColor }}
+              className="text-xl font-bold uppercase m-0 leading-none"
+            >
+              PAREKH{" "}
+              <span style={{ color: goldColor }} className="font-light">
+                FABRICS
+              </span>
+            </h1>
+
+            {/* Location */}
+            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-gray-400 font-semibold m-0">
+              Ahmedabad, India
+            </p>
+
+          </div>
         </Link>
 
         {/* Desktop Menu */}
@@ -77,6 +101,7 @@ const Navbar = () => {
                 <Link to="/about" className={linkClass}>About Us</Link>
                 <Link to="/management" className={linkClass}>Our Management</Link>
                 <Link to="/associates" className={linkClass}>Our Associates</Link>
+                <Link to="/customer-review" className={linkClass}>Customer Review</Link>
                 <Link to="/career" className={linkClass}>Careers</Link>
                 <Link to="/media" className={linkClass}>Media Gallery</Link>
               </div>
@@ -107,9 +132,9 @@ const Navbar = () => {
 
             {isBusinessOpen && (
               <div style={dropdownStyle}>
-                <Link to="/portal" className={linkClass}>e-Quotation</Link>
-                <Link to="/auction" className={linkClass}>e-Auction</Link>
-                <Link to="/tenders" className={linkClass}>Tenders</Link>
+                <Link to="/portal" className={linkClass}><span className="normal-case lowercase">e-</span>Quotation</Link>
+                <Link to="/auction" className={linkClass}><span className="normal-case lowercase">e-</span>Auction</Link>
+                <Link to="/tenders" className={linkClass}>Tender & Contract </Link>
                 <Link to="/circulars" className={linkClass}>Circulars</Link>
                 <Link to="/portal" className={linkClass}>Visit Appointment</Link>
               </div>
@@ -152,6 +177,7 @@ const Navbar = () => {
                 <Link to="/about" className="p-2">About Us</Link>
                 <Link to="/management" className="p-2">Our Management</Link>
                 <Link to="/associates" className="p-2">Our Associates</Link>
+                <Link to="/customer-review" className="p-2">Customer Review</Link>
               </div>
             )}
           </div>
@@ -166,8 +192,8 @@ const Navbar = () => {
             </div>
             {isBusinessOpen && (
               <div style={mobileDropdown}>
-                <Link to="/portal" className="p-2">e-Quotation</Link>
-                <Link to="/auction" className="p-2">e-Auction</Link>
+                <Link to="/portal" className="p-2"><span className="normal-case lowercase">e-</span>Quotation</Link>
+                <Link to="/auction" className="p-2"><span className="normal-case lowercase">e-</span>Auction</Link>
                 <Link to="/tenders" className="p-2">Tenders</Link>
                 <Link to="/circulars" className="p-2">Circulars</Link>
               </div>

@@ -44,8 +44,8 @@ const Footer = () => {
         <div>
           <h4 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-8">Business Hub</h4>
           <Link to="/portal" className={linkStyle}>Trade Enquiry</Link>
-          <Link to="/portal" className={linkStyle}>e-Quotation</Link>
-          <Link to="/auction" className={linkStyle}>e-Auction Portal</Link>
+          <Link to="/portal" className={linkStyle}><span className="normal-case lowercase">e-</span>Quotation</Link>
+          <Link to="/auction" className={linkStyle}><span className="normal-case lowercase">e-</span>Auction Portal</Link>
           <Link to="/tenders" className={linkStyle}>Official Tenders</Link>
           <Link to="/circulars" className={linkStyle}>Official Circulars</Link>
         </div>

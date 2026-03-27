@@ -55,7 +55,7 @@ const Management = () => {
         </div>
 
         {/* Vision Section */}
-        <div className="mt-32 p-12 md:p-24 bg-textile-dark text-white relative  text-center">
+        <div className="mt-32 p-12 md:p-24 bg-textile-dark text-white relative overflow-hidden text-center">
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-3xl italic mb-8">"Our legacy is woven with threads of integrity, innovation, and an unwavering commitment to the global textile community."</h2>
             <p className="text-textile-gold text-[10px] font-black uppercase tracking-[0.5em]">- The Parekh Philosophy</p>
