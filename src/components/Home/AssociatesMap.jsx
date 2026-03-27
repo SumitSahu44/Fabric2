@@ -1,16 +1,19 @@
 // File: src/components/Home/AssociatesMap.jsx
 import React from 'react';
-
+import Map from '../Common/Map';
 const AssociatesMap = () => {
   const goldColor = "#C5A059";
   const darkColor = "#1A1816";
 
-  const locations = [
-    { city: "Ahmedabad", type: "H.O. & Manufacturing", top: "38%", left: "28%" },
-    { city: "Mumbai", type: "Export Hub", top: "48%", left: "25%" },
-    { city: "Coimbatore", type: "Spinning Unit", top: "78%", left: "38%" },
-    { city: "Delhi", type: "Distribution", top: "18%", left: "38%" },
-  ];
+const locations = [
+    { id: 1, name: "Parekh Fabrics", city: "Ahmedabad", short: "Fabrics", x: 300, y: 475 },
+    { id: 2, name: "Parekh Silk", city: "Surat", short: "Silk", x: 330, y: 550 },
+    { id: 3, name: "Parekh Rayon", city: "Raipur", short: "Rayon", x: 488, y: 505 },
+    { id: 4, name: "Parekh Linen", city: "Kolkata", short: "Linen", x: 625, y: 515 },
+    { id: 5, name: "Parekh e-Trade Market", city: "Hyderabad", short: "e-Trade", x: 450, y: 635 },
+    { id: 6, name: "Parekh Chamber of Textile", city: "Bangalore", short: "Chamber", x: 405, y: 755 },
+    { id: 7, name: "Parekh Southern Polyfabrics", city: "Chennai", short: "Southern", x: 475, y: 755 },
+];
 
   return (
     <section className="py-24 bg-white overflow-hidden">
@@ -42,25 +45,7 @@ const AssociatesMap = () => {
         {/* Right Side: Proper India Map */}
         {/* Right Side: Image fallback */}
 <div className="relative h-[500px] w-full bg-textile-cream rounded-2xl border border-gray-200 overflow-hidden">
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/b/b4/India_outline.svg" 
-    alt="India Map Outline"
-    className="w-full h-full object-contain p-4"
-  />
-  {/* Markers same as above – absolute positioning pe rakh sakte ho */}
-  {locations.map((loc, i) => (
-    <div 
-      key={i} 
-      className="absolute group w-4 h-4 -translate-x-1/2 -translate-y-1/2"
-      style={{ top: loc.top, left: loc.left }}
-    >
-      <div className="w-4 h-4 bg-[#C5A059] rounded-full animate-ping absolute opacity-60"></div>
-      <div className={`w-4 h-4 rounded-full relative z-10 ${loc.city === "Ahmedabad" ? 'bg-[#1A1816]' : 'bg-[#C5A059]'}`}></div>
-      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-textile-dark text-white text-[8px] py-1 px-3 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
-        {loc.city}
-      </div>
-    </div>
-  ))}
+  <Map />
 </div>
 
       </div>
