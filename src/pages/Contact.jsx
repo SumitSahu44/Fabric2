@@ -1,6 +1,6 @@
 // File: src/pages/Contact.jsx
 import React from 'react';
-
+import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 const Contact = () => {
   const goldColor = "#C5A059";
   const darkColor = "#1A1816";
@@ -58,16 +58,19 @@ const Contact = () => {
               </div>
 
               {/* Social Presence */}
-              <div>
-                <h4 style={{ color: goldColor }} className="text-[11px] font-black uppercase tracking-widest mb-6">Follow Our Journey</h4>
-                <div className="flex gap-6">
-                  {['LinkedIn', 'Instagram', 'Facebook'].map(social => (
-                    <span key={social} className="text-[10px] font-black uppercase tracking-widest border-b border-textile-dark cursor-pointer hover:text-textile-gold hover:border-textile-gold transition-all">
-                      {social}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            <div className="flex gap-6 -mt-10 text-xl">
+  <a href="#">
+    <FaLinkedin className="text-textile-dark hover:text-textile-gold transition-all" />
+  </a>
+
+  <a href="#">
+    <FaInstagram className="text-textile-dark hover:text-textile-gold transition-all" />
+  </a>
+
+  <a href="#">
+    <FaFacebook className="text-textile-dark hover:text-textile-gold transition-all" />
+  </a>
+</div>
             </div>
           </div>
 

@@ -33,7 +33,7 @@ const Management = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center">
           <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.5em] mb-6">Leadership</h2>
-          <h1 style={{ color: darkColor }} className="text-5xl md:text-6xl font-light uppercase tracking-tighter leading-[0.9]">
+          <h1 style={{ color: darkColor }} className="text-5xl md:text-6xl font-light uppercase  leading-[0.9]">
             The Pillars of <br /> <span className="font-bold">Our Excellence</span>
           </h1>
           <div className="w-20 h-1 bg-textile-gold mx-auto mt-10"></div>
@@ -46,9 +46,9 @@ const Management = () => {
                 <img src={leader.image} alt={leader.name} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000" />
                 <div className="absolute inset-0 bg-textile-dark/20 group-hover:bg-transparent transition-all"></div>
               </div>
-              <h3 className="text-xl font-bold text-textile-dark uppercase tracking-tighter mb-1">{leader.name}</h3>
+              <h3 className="text-xl font-bold text-textile-dark uppercase  mb-1">{leader.name}</h3>
               <p className="text-[10px] text-textile-gold font-black uppercase tracking-widest mb-4">{leader.position}</p>
-              <p className="text-gray-400 text-[9px] font-bold uppercase tracking-widest mb-6">{leader.experience}</p>
+              <p className=" text-[9px] font-bold uppercase tracking-widest mb-6">{leader.experience}</p>
               <p className="text-gray-600 text-xs leading-relaxed uppercase tracking-widest">{leader.bio}</p>
             </div>
           ))}

@@ -65,7 +65,7 @@ const Navbar = () => {
             </h1>
 
             {/* Location */}
-            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] text-gray-400 font-semibold m-0">
+            <p className="text-[10px] md:text-[11px] uppercase tracking-[0.3em]  font-semibold m-0">
               Ahmedabad, India
             </p>
 

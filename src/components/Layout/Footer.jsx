@@ -16,7 +16,7 @@ const Footer = () => {
     fontFamily: 'ui-sans-serif, system-ui, sans-serif'
   };
 
-  const linkStyle = "hover:text-[#C5A059] transition-colors cursor-pointer no-underline text-gray-400 text-[11px] uppercase tracking-widest block mb-4";
+  const linkStyle = "hover:text-[#C5A059] transition-colors cursor-pointer no-underline  text-[11px] uppercase tracking-widest block mb-4";
 
   return (
     <footer style={footerStyle}>

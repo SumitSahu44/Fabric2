@@ -30,7 +30,7 @@ const Products = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.5em] mb-4">Parekh Inventory</h2>
-          <h1 style={{ color: darkColor }} className="text-6xl font-light uppercase tracking-tighter mb-8">
+          <h1 style={{ color: darkColor }} className="text-6xl font-light uppercase  mb-8">
             Product <span className="font-bold">Gallery</span>
           </h1>
           
@@ -67,7 +67,7 @@ const Products = () => {
                 {/* Overlay Details */}
                 <div className="absolute inset-x-0 bottom-0 bg-white/90 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <p style={{ color: goldColor }} className="text-[9px] font-bold uppercase tracking-widest mb-1">{product.cat}</p>
-                  <h4 style={{ color: darkColor }} className="text-lg font-bold uppercase tracking-tighter mb-4">{product.name}</h4>
+                  <h4 style={{ color: darkColor }} className="text-lg font-bold uppercase  mb-4">{product.name}</h4>
                   <button style={{ backgroundColor: darkColor }} className="w-full py-3 text-white text-[10px] font-bold uppercase tracking-widest hover:bg-[#C5A059] transition-colors">
                     Get Quote
                   </button>
@@ -85,7 +85,7 @@ const Products = () => {
 
         {/* No Items Found */}
         {filteredItems.length === 0 && (
-          <p className="text-center text-gray-400 py-20 uppercase tracking-widest text-xs">No products found in this category.</p>
+          <p className="text-center  py-20 uppercase tracking-widest text-xs">No products found in this category.</p>
         )}
 
       </div>

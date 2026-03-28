@@ -43,7 +43,7 @@ const FloatingActions = () => {
               </div>
               <div>
                 <span className="text-[10px] font-black tracking-widest uppercase block leading-none">Live Support</span>
-                <span className="text-[8px] text-gray-400 font-bold uppercase tracking-tighter">Ahmedabad HQ • Online</span>
+                <span className="text-[8px]  font-bold uppercase ">Ahmedabad HQ • Online</span>
               </div>
             </div>
             <button onClick={() => setIsChatOpen(false)} className="text-white text-xl hover:text-textile-gold transition-colors bg-transparent border-none cursor-pointer p-2">&times;</button>
@@ -69,7 +69,7 @@ const FloatingActions = () => {
                 key={option}
                 onClick={() => handleOptionClick(option)}
                 style={{ border: `1px solid ${goldColor}`, color: goldColor }}
-                className="bg-transparent text-[9px] font-bold py-2 px-3 rounded-full hover:bg-[#C5A059] hover:text-white active:scale-95 transition-all cursor-pointer uppercase tracking-tighter"
+                className="bg-transparent text-[9px] font-bold py-2 px-3 rounded-full hover:bg-[#C5A059] hover:text-white active:scale-95 transition-all cursor-pointer uppercase "
               >
                 {option}
               </button>

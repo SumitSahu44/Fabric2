@@ -16,7 +16,7 @@ const Reviews = () => {
           {reviews.map((rev, i) => (
             <div key={i} className="p-10 border border-white/10 hover:border-textile-gold transition-all relative group">
               <span className="text-6xl text-textile-gold absolute -top-4 -left-2 opacity-20 font-serif">“</span>
-              <p className="text-gray-400 text-sm leading-relaxed mb-8 relative z-10">{rev.text}</p>
+              <p className=" text-sm leading-relaxed mb-8 relative z-10">{rev.text}</p>
               <h4 className="text-xs font-bold uppercase tracking-widest">{rev.name}</h4>
               <p className="text-[10px] text-textile-gold uppercase font-medium mt-1">{rev.company}</p>
             </div>

@@ -25,7 +25,7 @@ const Appointment = () => {
         {/* Left Side: Text */}
         <div>
           <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-4">Plan Your Visit</h2>
-          <h1 style={{ color: darkColor }} className="text-6xl font-light uppercase tracking-tighter mb-8 leading-[0.9]">
+          <h1 style={{ color: darkColor }} className="text-6xl font-light uppercase  mb-8 leading-[0.9]">
             Factory <br/> <span className="font-bold italic text-textile-gold">Appointment</span>
           </h1>
           <p className="text-gray-500 text-sm leading-relaxed mb-10 max-w-sm">

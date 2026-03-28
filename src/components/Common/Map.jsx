@@ -12,7 +12,7 @@ const locations = [
 
 const PIN_COLOR = "#c5a059";
 
-function Pin({ loc, index, active, onClick }) {
+function Pin({ loc, index, onClick }) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -25,12 +25,12 @@ function Pin({ loc, index, active, onClick }) {
     let textAnchor = "middle";
 
     if (loc.id === 6) {
-        labelX = loc.x - 40;
-        labelY = loc.y - 5;
+        labelX = loc.x - 45;
+        labelY = loc.y - 8;
         textAnchor = "end";
     } else if (loc.id === 7) {
-        labelX = loc.x + 40;
-        labelY = loc.y - 5;
+        labelX = loc.x + 45;
+        labelY = loc.y - 8;
         textAnchor = "start";
     }
 
@@ -39,29 +39,29 @@ function Pin({ loc, index, active, onClick }) {
             onClick={() => onClick(loc.id)}
             style={{ opacity: visible ? 1 : 0, cursor: "pointer" }}
         >
-            {/* 🔴 Blink dot */}
-            <circle cx={loc.x} cy={loc.y} r="6" fill="#c5a059">
-
-                <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" />
+            {/* Blink dot */}
+            <circle cx={loc.x} cy={loc.y} r="6" fill={PIN_COLOR}>
+                <animate attributeName="opacity" values="1;0.4;1" dur="1.2s" repeatCount="indefinite" />
             </circle>
 
-            {/* Glow */}
-            <circle cx={loc.x} cy={loc.y} r="10" fill="none" stroke="#c5a059">
-                <animate attributeName="r" values="10;22" dur="1.5s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="0.7;0" dur="1.5s" repeatCount="indefinite" />
+            {/* Glow effect */}
+            <circle cx={loc.x} cy={loc.y} r="10" fill="none" stroke={PIN_COLOR} strokeWidth="2">
+                <animate attributeName="r" values="10;24" dur="1.8s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.6;0" dur="1.8s" repeatCount="indefinite" />
             </circle>
 
-            {/* ✅ TEXT (NAME + CITY) */}
+            {/* Label */}
             <text
                 x={labelX}
                 y={labelY}
                 textAnchor={textAnchor}
-                fontSize="14"
+                fontSize="15.5"
                 fontWeight="700"
                 fill="#1a237e"
+                style={{ pointerEvents: "none" }}
             >
                 <tspan x={labelX}>{loc.name}</tspan>
-                <tspan x={labelX} dy="16" fontSize="12" fill="#444">
+                <tspan x={labelX} dy="17" fontSize="12.5" fill="#444">
                     {loc.city}
                 </tspan>
             </text>
@@ -73,99 +73,57 @@ export default function MapPointerPolished() {
     const [active, setActive] = useState(null);
 
     return (
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-
-
-
-            {/* MAP */}
+        <div style={{ maxWidth: "920px", margin: "0 auto", padding: "10px 0" }}>
             <svg
                 viewBox="0 0 1000 1000"
                 style={{
                     width: "100%",
+                    height: "auto",
                     display: "block",
-                    margin: "0 auto"   // ✅ CENTER FIX
+                    margin: "0 auto"
                 }}
             >
-
-
-                {/* ✅ PERFECT BACKGROUND */}
-                <svg
-                    viewBox="0 0 1000 1000"
-                    style={{
-                        width: "100%",
-                        display: "block",
-                        margin: "0 auto"
-                    }}
+                {/* Heading - Bigger & Bolder */}
+                <text
+                    x="500"
+                    y="68"
+                    textAnchor="middle"
+                    fontSize="34"
+                    fontWeight="800"
+                    fill="#0f172b"
+                    letterSpacing="0.5"
                 >
+                    HC PAREKH & ASSOCIATES
+                </text>
 
+                <text
+                    x="500"
+                    y="98"
+                    textAnchor="middle"
+                    fontSize="14.5"
+                    fill="#334155"
+                    fontWeight="500"
+                >
+                    www.hcparekh.com
+                </text>
 
-                    {/* 🔲 OUTER BORDER BOX */}
-                    <rect
-                        x="20"
-                        y="20"
-                        width="960"
-                        height="960"
-                        fill="none"
-                        stroke="#000"
-                        strokeWidth="2"
-                    />
-                    {/* 🏷️ HEADING */}
-                    <text
-                        x="500"
-                        y="70"
-                        textAnchor="middle"
-                        fontSize="28"
-                        fontWeight="700"
-                        fill="#070c1"
-                        // color="#0f172b"
-                        letterSpacing="1"
-                    >
-                        HC PAREKH & ASSOCIATES
-                    </text>
+                {/* India Map Image - No Border */}
+                <image
+                    href="https://img.freepik.com/premium-vector/vector-map-black-outline-india-vector-illustration_686498-514.jpg?w=1060"
+                    x="38"
+                    y="125"
+                    width="924"
+                    height="840"
+                    preserveAspectRatio="xMidYMid meet"
+                    opacity="0.42"
+                />
 
-                    {/* 🌐 SUBTEXT (optional - like website) */}
-                    <text
-                        x="500"
-                        y="100"
-                        textAnchor="middle"
-                        fontSize="14"
-                        fill="#0f172b"
-                    >
-                        www.hcparekh.com
-                    </text>
-
-
-                    {/* 🗺️ IMAGE (center me) */}
-                    <image
-                        href="https://img.freepik.com/premium-vector/vector-map-black-outline-india-vector-illustration_686498-514.jpg?w=1060"
-                        x="40"
-                        y="40"
-                        width="920"
-                        height="920"
-                        preserveAspectRatio="xMidYMid meet"  // ✅ correct centering
-                        opacity="0.4"
-                    />
-
-                    {/* Pins */}
-                    {locations.map((loc, i) => (
-                        <Pin
-                            key={loc.id}
-                            loc={loc}
-                            index={i}
-                            active={active === loc.id}
-                            onClick={setActive}
-                        />
-                    ))}
-
-                </svg>
-
-                {/* Pins */}
+                {/* All Pins */}
                 {locations.map((loc, i) => (
                     <Pin
                         key={loc.id}
                         loc={loc}
                         index={i}
-                        active={active === loc.id}
                         onClick={setActive}
                     />
                 ))}

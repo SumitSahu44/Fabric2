@@ -27,7 +27,7 @@ const About = () => {
           </div>
           <div>
             <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.5em] mb-6 text-textile-gold">Our Legacy</h2>
-            <h1 style={{ color: darkColor }} className="text-6xl font-light uppercase tracking-tighter leading-none mb-8">
+            <h1 style={{ color: darkColor }} className="text-6xl font-light uppercase  leading-none mb-8">
               Decades of <br/> <span className="font-bold italic">Textile Mastery</span>
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
@@ -44,8 +44,8 @@ const About = () => {
           {values.map((v, i) => (
             <div key={i} className="bg-white p-12 shadow-xl border-b-4 border-transparent hover:border-textile-gold transition-all group">
               <span style={{ color: goldColor }} className="text-4xl font-mono font-bold opacity-20 group-hover:opacity-100 transition-opacity">0{i+1}</span>
-              <h4 style={{ color: darkColor }} className="text-xl font-bold uppercase tracking-tighter mt-4 mb-4">{v.title}</h4>
-              <p className="text-gray-400 text-xs uppercase tracking-widest leading-relaxed font-bold">{v.desc}</p>
+              <h4 style={{ color: darkColor }} className="text-xl font-bold uppercase  mt-4 mb-4">{v.title}</h4>
+              <p className=" text-xs uppercase tracking-widest leading-relaxed font-bold">{v.desc}</p>
             </div>
           ))}
         </div>
@@ -53,8 +53,8 @@ const About = () => {
         {/* 3. MANUFACTURING STRENGTH */}
         <div style={{ backgroundColor: darkColor }} className="p-16 text-white grid lg:grid-cols-3 gap-16 items-center shadow-2xl relative overflow-hidden">
            <div className="lg:col-span-2">
-              <h3 className="text-4xl font-light uppercase tracking-tighter mb-6">Advanced <span style={{ color: goldColor }}>Manufacturing</span> Unit</h3>
-              <p className="text-gray-400 text-sm leading-loose max-w-2xl uppercase tracking-widest">
+              <h3 className="text-4xl font-light uppercase  mb-6">Advanced <span style={{ color: goldColor }}>Manufacturing</span> Unit</h3>
+              <p className=" text-sm leading-loose max-w-2xl uppercase tracking-widest">
                 Our Ahmedabad facility is equipped with high-speed air-jet looms and automated spinning units, ensuring that we produce over 1 million meters of premium fabric every month with zero defects.
               </p>
            </div>

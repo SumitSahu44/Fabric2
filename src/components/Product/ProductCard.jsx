@@ -20,7 +20,7 @@ const ProductCard = ({ image, name, category }) => {
       </div>
       <div className="mt-4">
         <h3 className="text-sm font-bold text-textile-dark uppercase tracking-widest">{name}</h3>
-        <p className="text-[10px] text-textile-gold font-bold uppercase mt-1 tracking-tighter">{category}</p>
+        <p className="text-[10px] text-textile-gold font-bold uppercase mt-1 ">{category}</p>
       </div>
     </div>
   );

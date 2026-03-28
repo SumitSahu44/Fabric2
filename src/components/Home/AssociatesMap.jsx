@@ -22,7 +22,7 @@ const locations = [
         {/* Left Side: Info (same as before) */}
         <div>
           <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-4">Network</h2>
-          <h3 style={{ color: darkColor }} className="text-5xl font-light mb-8 uppercase tracking-tighter">
+          <h3 style={{ color: darkColor }} className="text-5xl font-light mb-8 uppercase ">
             Our Textile <br/> <span className="font-bold italic">Associates</span>
           </h3>
           <p className="text-gray-500 leading-loose mb-10 text-sm">
@@ -35,7 +35,7 @@ const locations = [
                 <span style={{ color: goldColor }} className="font-mono font-bold">0{i+1}</span>
                 <div>
                   <h4 className="text-xs font-black uppercase tracking-widest text-textile-dark group-hover:text-[#C5A059] transition-colors">{loc.city}</h4>
-                  <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">{loc.type}</p>
+                  <p className="text-[10px]  uppercase tracking-widest mt-1">{loc.type}</p>
                 </div>
               </div>
             ))}

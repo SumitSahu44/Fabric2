@@ -13,7 +13,7 @@ const MediaGallery = () => {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-4xl font-light text-textile-dark uppercase tracking-tighter">Media <span className="font-bold">Gallery</span></h2>
+          <h2 className="text-4xl font-light text-textile-dark uppercase ">Media <span className="font-bold">Gallery</span></h2>
           <button className="text-xs font-bold text-textile-gold border-b border-textile-gold tracking-widest uppercase">Visit Ahmedabad Unit</button>
         </div>
         

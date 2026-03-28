@@ -41,7 +41,7 @@ const IndiaMap = () => {
           {/* Tooltip */}
           <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 bg-textile-dark text-white p-4 whitespace-nowrap opacity-0 group-hover/dot:opacity-100 transition-all scale-75 group-hover/dot:scale-100 pointer-events-none shadow-2xl border-t-2 border-textile-gold">
             <h4 className="text-[10px] font-black uppercase tracking-widest">{hub.name}</h4>
-            <p className="text-[8px] text-textile-gold font-bold uppercase tracking-tighter">{hub.type}</p>
+            <p className="text-[8px] text-textile-gold font-bold uppercase ">{hub.type}</p>
           </div>
         </div>
       ))}
@@ -52,11 +52,11 @@ const IndiaMap = () => {
         <div className="space-y-2">
           <div className="flex items-center gap-3">
              <div className="w-2 h-2 bg-textile-gold rounded-full"></div>
-             <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Active Associate</span>
+             <span className="text-[9px] font-bold  uppercase tracking-widest">Active Associate</span>
           </div>
           <div className="flex items-center gap-3">
              <div className="w-2 h-2 bg-textile-dark rounded-full"></div>
-             <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Processing Hub</span>
+             <span className="text-[9px] font-bold  uppercase tracking-widest">Processing Hub</span>
           </div>
         </div>
       </div>

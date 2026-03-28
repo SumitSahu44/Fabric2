@@ -36,7 +36,7 @@ const Blog = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center">
           <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.5em] mb-6">Textile Journal</h2>
-          <h1 style={{ color: darkColor }} className="text-5xl md:text-6xl font-light uppercase tracking-tighter leading-[0.9]">
+          <h1 style={{ color: darkColor }} className="text-5xl md:text-6xl font-light uppercase  leading-[0.9]">
             Insights & <br /> <span className="font-bold">Innovations</span>
           </h1>
           <div className="w-20 h-1 bg-textile-gold mx-auto mt-10"></div>
@@ -53,11 +53,11 @@ const Blog = () => {
               </div>
               <div className="p-8">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">{post.date}</span>
+                  <span className="text-[9px]  font-bold uppercase tracking-widest">{post.date}</span>
                   <span className="w-1 h-1 bg-gray-200 rounded-full"></span>
-                  <span className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">By {post.author}</span>
+                  <span className="text-[9px]  font-bold uppercase tracking-widest">By {post.author}</span>
                 </div>
-                <h3 className="text-xl font-bold uppercase tracking-tighter mb-6 group-hover:text-textile-gold transition-colors leading-tight">{post.title}</h3>
+                <h3 className="text-xl font-bold uppercase  mb-6 group-hover:text-textile-gold transition-colors leading-tight">{post.title}</h3>
                 <p className="text-gray-600 text-[11px] leading-relaxed uppercase tracking-widest mb-8 line-clamp-3">{post.excerpt}</p>
                 <button className="text-[10px] font-black border-b border-textile-dark pb-1 uppercase tracking-widest hover:text-textile-gold hover:border-textile-gold transition-all">Read More</button>
               </div>

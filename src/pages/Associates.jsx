@@ -61,7 +61,7 @@ const Associates = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-end mb-20">
           <div>
             <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.5em] mb-6">Our Footprint</h2>
-            <h1 style={{ color: darkColor }} className="text-5xl md:text-6xl font-light uppercase tracking-tighter leading-[0.9]">
+            <h1 style={{ color: darkColor }} className="text-5xl md:text-6xl font-light uppercase  leading-[0.9]">
               Textile Associates <br /> <span className="font-bold">Across India</span>
             </h1>
           </div>
@@ -83,22 +83,22 @@ const Associates = () => {
             {regions.map((region, index) => (
               <div key={index} className="bg-white p-8 shadow-lg hover:shadow-xl transition-all border-r-4 border-transparent hover:border-textile-gold">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-bold text-textile-dark uppercase tracking-tighter">
+                  <h3 className="text-lg font-bold text-textile-dark uppercase ">
                     {region.name.includes("e-") 
                       ? <>{region.name.split("e-")[0]}<span className="normal-case lowercase">e-</span>{region.name.split("e-")[1]}</>
                       : region.name}
                   </h3>
                   <span className="text-[10px] font-black text-textile-gold bg-textile-cream px-3 py-1 uppercase">{region.partners} Units</span>
                 </div>
-                <p className="text-[9px] font-black text-gray-300 uppercase tracking-widest mb-4">{region.city}</p>
+                <p className="text-[9px] font-black text-gray-500 uppercase tracking-widest mb-4">{region.city}</p>
                 <p className="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest">{region.description}</p>
               </div>
             ))}
 
             {/* CTA Box */}
             <div className="bg-textile-dark p-8 text-white mt-12">
-              <h4 className="text-sm font-bold uppercase tracking-tighter mb-4">Become an Associate</h4>
-              <p className="text-[10px] text-gray-400 uppercase tracking-widest mb-8">Join the Parekh network and scale your textile operations globally.</p>
+              <h4 className="text-sm font-bold uppercase  mb-4">Become an Associate</h4>
+              <p className="text-[10px]  uppercase tracking-widest mb-8">Join the Parekh network and scale your textile operations globally.</p>
               <button className="w-full border border-textile-gold text-textile-gold py-4 text-[9px] font-black uppercase tracking-[0.3em] hover:bg-textile-gold hover:text-white transition-all">Download Partnership PDF</button>
             </div>
           </div>

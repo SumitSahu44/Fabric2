@@ -21,8 +21,8 @@ const BusinessPortal = () => {
             
             {/* Added B2B Info Box */}
             <div className="mt-12 p-12 bg-textile-dark text-white relative overflow-hidden">
-               <h3 className="text-2xl font-bold uppercase tracking-tighter mb-4">Bulk Procurement <span className="text-textile-gold">Guide</span></h3>
-               <p className="text-gray-400 text-xs leading-relaxed mb-8 uppercase tracking-widest">
+               <h3 className="text-2xl font-bold uppercase  mb-4">Bulk Procurement <span className="text-textile-gold">Guide</span></h3>
+               <p className=" text-xs leading-relaxed mb-8 uppercase tracking-widest">
                  Minimum Order Quantity (MOQ) starts from 500 Meters for Finished Fabric and 1000 KG for Raw Cotton. 
                  GST 5% will be applicable as per Gujarat Textile Norms.
                </p>

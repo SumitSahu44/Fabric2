@@ -32,7 +32,7 @@ const CustomerReviews = () => {
     <section className="py-24 bg-textile-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 text-center mb-16">
         <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.5em] mb-4">Client Feedback</h2>
-        <h3 style={{ color: darkColor }} className="text-4xl font-bold uppercase tracking-tighter">Global <span className="font-light italic">Trust</span></h3>
+        <h3 style={{ color: darkColor }} className="text-4xl font-bold uppercase ">Global <span className="font-light italic">Trust</span></h3>
       </div>
 
       <div className="flex overflow-x-auto gap-8 px-8 pb-12 scrollbar-hide snap-x">
@@ -53,9 +53,9 @@ const CustomerReviews = () => {
              <div className="border-t border-gray-100 pt-8 flex justify-between items-center">
                <div>
                   <h4 className="text-[10px] font-black text-textile-dark uppercase tracking-widest">{review.name}</h4>
-                  <p className="text-[9px] text-gray-400 font-bold uppercase tracking-tighter mt-1">{review.company}</p>
+                  <p className="text-[9px]  font-bold uppercase  mt-1">{review.company}</p>
                </div>
-               <span className="text-[8px] font-black text-gray-300 uppercase tracking-widest">{review.date}</span>
+               <span className="text-[8px] font-black text-gray-500 uppercase tracking-widest">{review.date}</span>
              </div>
           </div>
         ))}

@@ -40,7 +40,7 @@ const Circular = () => {
       <div className="max-w-7xl mx-auto">
         <div className="mb-20">
           <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.5em] mb-6">Official Notices</h2>
-          <h1 style={{ color: darkColor }} className="text-5xl md:text-6xl font-light uppercase tracking-tighter leading-[0.9]">
+          <h1 style={{ color: darkColor }} className="text-5xl md:text-6xl font-light uppercase  leading-[0.9]">
             Company <br/> <span className="font-bold">Circulars</span>
           </h1>
           <div className="w-20 h-1 bg-textile-gold mt-10"></div>
@@ -52,13 +52,13 @@ const Circular = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-[9px] font-black bg-textile-dark text-white px-3 py-1 uppercase tracking-widest">{item.category}</span>
-                  <span className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">{item.date}</span>
+                  <span className="text-[9px]  font-bold uppercase tracking-widest">{item.date}</span>
                 </div>
-                <h3 className="text-2xl font-bold text-textile-dark uppercase tracking-tighter mb-4 group-hover:text-textile-gold transition-colors">{item.title}</h3>
+                <h3 className="text-2xl font-bold text-textile-dark uppercase  mb-4 group-hover:text-textile-gold transition-colors">{item.title}</h3>
                 <p className="text-gray-600 text-[11px] leading-relaxed uppercase tracking-widest max-w-2xl">{item.summary}</p>
               </div>
               <div className="flex flex-col items-end shrink-0">
-                <span className="text-[10px] font-mono text-gray-300 font-bold mb-6">{item.id}</span>
+                <span className="text-[10px] font-mono text-gray-500 font-bold mb-6">{item.id}</span>
                 <button className="text-[10px] font-black border-b border-textile-dark pb-1 uppercase tracking-widest hover:text-textile-gold hover:border-textile-gold transition-all">Download PDF</button>
               </div>
             </div>

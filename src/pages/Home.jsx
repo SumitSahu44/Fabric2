@@ -149,8 +149,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
           <div style={{ backgroundColor: darkColor }} className="p-16 text-white relative overflow-hidden group shadow-2xl">
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold uppercase tracking-tighter mb-4">Join Our Team</h3>
-              <p className="text-gray-400 text-sm mb-10 leading-relaxed uppercase tracking-widest">Empowering the next generation of textile engineers and business leaders.</p>
+              <h3 className="text-3xl font-bold uppercase  mb-4">Join Our Team</h3>
+              <p className=" text-sm mb-10 leading-relaxed uppercase tracking-widest">Empowering the next generation of textile engineers and business leaders.</p>
               <Link to="/career" style={{ backgroundColor: goldColor }} className="inline-block text-white px-10 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-textile-dark transition-all no-underline">
                 View Openings
               </Link>
@@ -169,7 +169,7 @@ const Home = () => {
                 <Link key={i} to={blog.link} className="block group cursor-pointer border-b border-gray-100 pb-6 no-underline">
                   <h4 className="text-xl font-bold text-textile-dark group-hover:text-textile-gold transition-colors mb-2 uppercase tracking-tight">{blog.title}</h4>
                   <div className="flex items-center gap-4">
-                    <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">March 2026</span>
+                    <span className="text-[10px]  uppercase tracking-widest font-bold">March 2026</span>
                     <span style={{ backgroundColor: goldColor }} className="w-1 h-1 rounded-full"></span>
                     <span className="text-[10px] text-textile-gold uppercase font-bold">5 Min Read</span>
                   </div>

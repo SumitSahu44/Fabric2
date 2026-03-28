@@ -17,7 +17,7 @@ const MediaGallery = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-4">Visual Tour</h2>
-          <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase tracking-tighter">Media <span className="font-bold italic">Showcase</span></h1>
+          <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase ">Media <span className="font-bold italic">Showcase</span></h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

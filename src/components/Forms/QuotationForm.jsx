@@ -23,13 +23,13 @@ const QuotationForm = () => {
 
   return (
     <div className="bg-white p-10 shadow-2xl border-t-4" style={{ borderColor: goldColor }}>
-      <h3 className="text-2xl font-bold uppercase tracking-tighter mb-2" style={{ color: darkColor }}>
+      <h3 className="text-2xl font-bold uppercase  mb-2" style={{ color: darkColor }}>
         <span className="normal-case lowercase">e-</span>Quotation <span style={{ color: goldColor }}>Generator</span>
       </h3>
-      <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.3em] mb-10">Instant B2B Price Estimate</p>
+      <p className="text-[10px]  font-bold uppercase tracking-[0.3em] mb-10">Instant B2B Price Estimate</p>
 
       <form onSubmit={(e) => e.preventDefault()}>
-        <label className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Select Fabric Variant</label>
+        <label className="text-[10px] font-black uppercase  tracking-widest">Select Fabric Variant</label>
         <select 
           style={inputStyle} 
           onChange={(e) => setProduct(e.target.value)}
@@ -41,7 +41,7 @@ const QuotationForm = () => {
           <option value="Yarn">Combed Cotton Yarn</option>
         </select>
 
-        <label className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Quantity (Meters / Kg)</label>
+        <label className="text-[10px] font-black uppercase  tracking-widest">Quantity (Meters / Kg)</label>
         <input 
           type="number" 
           placeholder="e.g. 5000" 

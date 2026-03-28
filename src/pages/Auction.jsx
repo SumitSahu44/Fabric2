@@ -16,11 +16,11 @@ const Auction = () => {
         <div className="flex justify-between items-end mb-12">
           <div>
             <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-4">Live Bidding</h2>
-            <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase tracking-tighter"><span className="normal-case lowercase">e-</span>Auction <span className="font-bold">Portal</span></h1>
+            <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase "><span className="normal-case lowercase">e-</span>Auction <span className="font-bold">Portal</span></h1>
           </div>
           <div className="flex gap-4">
             <div className="bg-white px-6 py-2 border border-gray-100 shadow-sm text-center">
-              <p className="text-[8px] text-gray-400 uppercase font-black mb-1">Live Auctions</p>
+              <p className="text-[8px]  uppercase font-black mb-1">Live Auctions</p>
               <p className="text-lg font-bold text-green-600">02</p>
             </div>
             <button style={{ backgroundColor: darkColor }} className="text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-[#C5A059] transition-all">KYC Verification</button>
@@ -32,24 +32,24 @@ const Auction = () => {
             <div key={index} className="bg-white shadow-xl border-t-4 hover:shadow-2xl transition-all duration-500" style={{ borderColor: item.end === 'Closed' ? '#EEE' : goldColor }}>
               <div className="p-8">
                 <div className="flex justify-between items-start mb-6">
-                  <span className="text-[10px] font-mono text-gray-300 font-bold">{item.id}</span>
-                  <span className={`text-[8px] font-black uppercase px-2 py-1 ${item.end === 'Closed' ? 'bg-gray-100 text-gray-400' : 'bg-red-50 text-red-600 animate-pulse'}`}>
+                  <span className="text-[10px] font-mono text-gray-500 font-bold">{item.id}</span>
+                  <span className={`text-[8px] font-black uppercase px-2 py-1 ${item.end === 'Closed' ? 'bg-gray-100 ' : 'bg-red-50 text-red-600 animate-pulse'}`}>
                     {item.end === 'Closed' ? 'Ended' : 'Live'}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-textile-dark uppercase tracking-tighter mb-4 h-12">{item.title}</h3>
+                <h3 className="text-lg font-bold text-textile-dark uppercase  mb-4 h-12">{item.title}</h3>
                 
                 <div className="space-y-3 mb-8">
                   <div className="flex justify-between border-b border-gray-50 pb-2">
-                    <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Current Bid:</span>
+                    <span className="text-[10px]  uppercase font-bold tracking-widest">Current Bid:</span>
                     <span className="text-[11px] text-textile-dark font-black">{item.currentBid}</span>
                   </div>
                   <div className="flex justify-between border-b border-gray-50 pb-2">
-                    <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Time Left:</span>
+                    <span className="text-[10px]  uppercase font-bold tracking-widest">Time Left:</span>
                     <span className="text-[11px] text-textile-gold font-bold">{item.end}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Active Bidders:</span>
+                    <span className="text-[10px]  uppercase font-bold tracking-widest">Active Bidders:</span>
                     <span className="text-[11px] text-textile-dark font-bold">{item.bidders}</span>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ const Auction = () => {
                 <button 
                   disabled={item.end === 'Closed'}
                   className={`w-full py-4 text-[10px] font-black uppercase tracking-[0.3em] transition-all ${
-                    item.end === 'Closed' ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-textile-dark text-white hover:bg-textile-gold'
+                    item.end === 'Closed' ? 'bg-gray-100  cursor-not-allowed' : 'bg-textile-dark text-white hover:bg-textile-gold'
                   }`}
                 >
                   {item.end === 'Closed' ? 'Auction Ended' : 'Place Bid'}

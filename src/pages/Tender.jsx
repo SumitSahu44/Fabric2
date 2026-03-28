@@ -17,7 +17,7 @@ const Tender = () => {
         <div className="flex justify-between items-end mb-12">
           <div>
             <h2 style={{ color: goldColor }} className="text-[10px] font-black uppercase tracking-[0.4em] mb-4">Official Portal</h2>
-            <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase tracking-tighter">B2B <span className="font-bold">Tenders</span></h1>
+            <h1 style={{ color: darkColor }} className="text-5xl font-light uppercase ">B2B <span className="font-bold">Tenders</span></h1>
           </div>
           <button style={{ backgroundColor: darkColor }} className="text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-[#C5A059] transition-all">Download Guidelines</button>
         </div>
@@ -25,7 +25,7 @@ const Tender = () => {
         <div className="bg-white shadow-2xl overflow-hidden border-t-4" style={{ borderColor: goldColor }}>
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-gray-50 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+              <tr className="bg-gray-50 text-[11px] font-bold uppercase tracking-widest ">
                 <th className="p-6 border-b">Tender ID</th>
                 <th className="p-6 border-b">Description</th>
                 <th className="p-6 border-b">Status</th>
@@ -39,12 +39,12 @@ const Tender = () => {
                   <td className="p-6 font-mono text-xs text-textile-gold font-bold">{item.id}</td>
                   <td className="p-6">
                     <p className="text-sm font-bold text-textile-dark uppercase m-0">{item.title}</p>
-                    <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">{item.category}</span>
+                    <span className="text-[10px]  uppercase tracking-widest font-bold">{item.category}</span>
                   </td>
                   <td className="p-6">
                     <span className={`text-[9px] font-bold uppercase px-3 py-1 rounded-full ${
                       item.status === 'Live' ? 'bg-green-100 text-green-700 animate-pulse' : 
-                      item.status === 'Upcoming' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-400'
+                      item.status === 'Upcoming' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 '
                     }`}>
                       {item.status}
                     </span>
